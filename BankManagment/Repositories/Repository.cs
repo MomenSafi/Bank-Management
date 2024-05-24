@@ -48,5 +48,10 @@ namespace Repositories
         {
             return _dbSet.AsQueryable();
         }
+
+        public T GetById(int id)
+        {
+            return context.Set<T>().FirstOrDefault();
+        }
     }
 }

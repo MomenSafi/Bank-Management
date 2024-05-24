@@ -13,5 +13,7 @@ namespace Repositories
         bool Delete(T entity);
         IQueryable<T> GetAll();
         // IEnumerable<T> GetAll2();
+
+        T GetById(int id);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DomainEntities.DBEntities;
+using Microsoft.Extensions.DependencyInjection;
 using Repositories;
 using Repositories.IRepository;
 using Repositories.Repository;
@@ -17,6 +18,7 @@ namespace IOC
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<INationalityRepository, NationalityRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
         }
     }
 }
