@@ -1,0 +1,15 @@
+﻿@model Infrastructure.DTO.NationalityDTO;
+<form asp-action="AddNewNationality">
+    <div class="row">
+        <div class="col-md-4">
+            Nationality Name
+            <input type="text" asp-for="NationalityName" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+    </div>
+</form>

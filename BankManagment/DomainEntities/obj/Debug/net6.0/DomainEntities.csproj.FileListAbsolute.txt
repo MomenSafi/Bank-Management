@@ -1,0 +1,14 @@
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\bin\Debug\net6.0\DomainEntities.deps.json
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\bin\Debug\net6.0\DomainEntities.runtimeconfig.json
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\bin\Debug\net6.0\DomainEntities.dll
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\bin\Debug\net6.0\DomainEntities.pdb
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.AssemblyInfoInputs.cache
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.AssemblyInfo.cs
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.dll
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\refint\DomainEntities.dll
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.pdb
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.genruntimeconfig.cache
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\ref\DomainEntities.dll
