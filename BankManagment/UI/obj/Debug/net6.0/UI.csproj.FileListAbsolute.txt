@@ -33,3 +33,4 @@ C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankM
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\UI\obj\Debug\net6.0\UI.genruntimeconfig.cache
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\UI\obj\Debug\net6.0\ref\UI.dll
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\UI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\UI\obj\Debug\net6.0\UI.sourcelink.json

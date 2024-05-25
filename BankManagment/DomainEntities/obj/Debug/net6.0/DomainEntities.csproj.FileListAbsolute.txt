@@ -12,3 +12,4 @@ C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankM
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.pdb
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.genruntimeconfig.cache
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\ref\DomainEntities.dll
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\DomainEntities\obj\Debug\net6.0\DomainEntities.sourcelink.json

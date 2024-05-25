@@ -9,3 +9,4 @@ C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankM
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Infrastructure\obj\Debug\net6.0\Infrastructure.sourcelink.json

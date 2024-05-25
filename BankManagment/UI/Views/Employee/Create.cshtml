@@ -1,0 +1,71 @@
+﻿@model Infrastructure.DTO.EmployeeDTO;
+
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title fw-semibold mb-4">Add New Employee</h5>
+                <div class="card">
+                    <div class="card-body">
+                        <form asp-action="AddNewEmployee">
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <span class="text-danger">*</span>
+                                <input type="text" class="form-control" asp-for="FullName"/> 
+                                <span class="text-danger" asp-validation-for="FullName"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mobile</label>
+                                <span class="text-danger">*</span>
+                                <input type="text" class="form-control" asp-for="Mobile"/>
+                                <span class="text-danger" asp-validation-for="Mobile"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Address</label>
+                                <span class="text-danger">*</span>
+                                <input type="text" class="form-control" asp-for="Address" />
+                                <span class="text-danger" asp-validation-for="Address"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <span class="text-danger">*</span>
+                                <input type="email" class="form-control" asp-for="Email" />
+                                <span class="text-danger" asp-validation-for="Email"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Join Date</label>
+                                <span class="text-danger">*</span>
+                                <input type="date" class="form-control" asp-for="JoinDate" />
+                                <span class="text-danger" asp-validation-for="JoinDate"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Salary</label>
+                                <span class="text-danger">*</span>
+                                <input type="number" class="form-control" asp-for="Salary" />
+                                <span class="text-danger" asp-validation-for="Salary"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Date of birth</label>
+                                <span class="text-danger">*</span>
+                                <input type="date" class="form-control" asp-for="DateOfBirth" />
+                                <span class="text-danger" asp-validation-for="DateOfBirth"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Qualification</label>
+                                <span class="text-danger">*</span>
+                                <select class="form-select" asp-for="QualificationId" asp-items="@(new SelectList(ViewBag.Qualification,"Id","Name"))">
+                                    <option value="">Please Select</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="QualificationId"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

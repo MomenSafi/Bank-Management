@@ -71,3 +71,4 @@ C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankM
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Api\bin\Debug\net6.0\IOC.pdb
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Api\bin\Debug\net6.0\Infrastructure.dll
 C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Api\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\HP\OneDrive - Hashemite University\Desktop\asp.net advanced\Apply\BankManagment\BankManagment\Api\obj\Debug\net6.0\Api.sourcelink.json

@@ -12,10 +12,12 @@ namespace Api.Controllers.Employees
     {
 
         private readonly IEmployeeRepository _employeeRepository;
+        private readonly IQualificationRepository _qualificationRepository;
 
-        public EmployeeController (IEmployeeRepository employeeRepository)
+        public EmployeeController (IEmployeeRepository employeeRepository, IQualificationRepository qualificationRepository)
         {
             _employeeRepository = employeeRepository;
+            _qualificationRepository = qualificationRepository;
         }
         
         public IActionResult AddNewEmployee(EmployeeDTO employeeDTO)
@@ -89,6 +91,23 @@ namespace Api.Controllers.Employees
             });
 
             return Ok(jsonString);
+        }
+
+        public IActionResult GetAllQualification()
+        {
+            List<QualificationDTO> lst = (from obj in _qualificationRepository.GetAll()
+                                          select new QualificationDTO
+                                          {
+                                              Id= obj.Id,
+                                              Name= obj.Name,
+                                          }).ToList ();
+
+            string jsonString = JsonConvert.SerializeObject(lst, Formatting.None, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+
+            return Ok("jsonString");
         }
     }
 }
