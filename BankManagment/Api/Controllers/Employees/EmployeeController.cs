@@ -96,7 +96,7 @@ namespace Api.Controllers.Employees
         public IActionResult GetAllQualification()
         {
             List<QualificationDTO> lst = (from obj in _qualificationRepository.GetAll()
-                                          select new QualificationDTO
+                                             select new QualificationDTO
                                           {
                                               Id= obj.Id,
                                               Name= obj.Name,
@@ -107,7 +107,7 @@ namespace Api.Controllers.Employees
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
 
-            return Ok("jsonString");
+            return Ok(jsonString);
         }
     }
 }

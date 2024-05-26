@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Infrastructure.DTO;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace UI.Controllers
 {
@@ -8,11 +9,11 @@ namespace UI.Controllers
     {
         public async Task<IActionResult> Create()
         {
-            HttpClient httpClient = new HttpClient();
+            HttpClient client = new HttpClient();
 
             string url = "http://localhost:37833/";
 
-            var response = await httpClient.GetAsync(url + "api/Employee/GetAllQualification");
+            var response = await client.GetAsync(url + "api/Employee/GetAllQualification");
 
             string apiResponse = await response.Content.ReadAsStringAsync();
 
@@ -21,7 +22,44 @@ namespace UI.Controllers
             return View();
         }
 
-        public IActionResult AddNewEmployee(EmployeeDTO employeeDTO) 
+        public async Task<IActionResult> AddNewEmployee(EmployeeDTO employeeDTO) 
+        {
+            HttpClient client = new HttpClient();
+
+            string url = "http://localhost:37833/";
+
+            var EmployeeContextDTO = JsonConvert.SerializeObject(employeeDTO);
+
+            var response = await client.PostAsync(url + "api/Employee/AddNewEmployee",
+                new StringContent(EmployeeContextDTO, Encoding.UTF8, "application/json"));
+
+            if(response.StatusCode == System.Net.HttpStatusCode.OK) 
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+                //Error page 
+            }
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            HttpClient client = new HttpClient();
+
+            string url = "http://localhost:37833/";
+
+            var response = await client.GetAsync(url + "api/Employee/GetAllEmployee");
+            string apiResponse = await response.Content.ReadAsStringAsync();
+
+            var result = JsonConvert.DeserializeObject<List<EmployeeDTO>>(apiResponse);
+
+
+
+            return View(result);
+        }
+        public IActionResult Update()
         {
             return View();
         }
