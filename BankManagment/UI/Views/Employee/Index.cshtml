@@ -44,7 +44,10 @@
 </div>
 <script>
     $('#myTable').DataTable({
-        buttons:
-        ['copy','csv','excel','pdf','print']
+        layout: {
+            topdown: {
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+            }
+        }
     });
 </script>
