@@ -4,7 +4,9 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title fw-semibold mb-4">Add New Employee</h5>
+                <h5 class="card-title fw-semibold mb-4">View All Employees
+                    <a asp-action="Create" style="float:right; font-size:15px" >Add New Employee</a>
+                </h5>
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -29,7 +31,10 @@
                                                 <td>@item.Address</td>
                                                 <td>@item.JoinDate.ToString("dd/MM/yyyy")</td>
                                                 <td>@item.Salary</td>
-                                                <td></td>
+                                                <td style="font-size:1.25rem">
+                                                    <a asp-action="Update" asp-route-ID="@item.Id"class="ti ti-edit"></a>
+                                                    <a asp-action="Delete" asp-route-ID="@item.Id" class="ti ti-trash"></a>
+                                                </td>
                                             </tr>
                                         }
                                     </tbody>

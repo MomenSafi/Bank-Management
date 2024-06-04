@@ -59,9 +59,72 @@ namespace UI.Controllers
 
             return View(result);
         }
-        public IActionResult Update()
+        public async Task<IActionResult> Update(int ID)
         {
-            return View();
+            HttpClient client = new HttpClient();
+
+            string url = "http://localhost:37833/";
+
+            var Qualificationresponse = await client.GetAsync(url + "api/Employee/GetAllQualification");
+
+            string QualificationapiResponse = await Qualificationresponse.Content.ReadAsStringAsync();
+
+            ViewBag.Qualification = JsonConvert.DeserializeObject<List<QualificationDTO>>(QualificationapiResponse);
+
+            var response = await client.GetAsync(url + "api/Employee/GetEmployeeById?id=" + ID);
+
+            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var apiResponse = await response.Content.ReadAsStringAsync();
+                EmployeeDTO employeeDTO = JsonConvert.DeserializeObject<EmployeeDTO>(apiResponse);
+                return View(employeeDTO);
+
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        public async Task<IActionResult> UpdateEmployee(EmployeeDTO employeeDTO)
+        {
+            HttpClient client = new HttpClient();
+
+            string url = "http://localhost:37833/";
+
+            var EmployeeContextDTO = JsonConvert.SerializeObject(employeeDTO);
+
+            var response = await client.PostAsync(url + "api/Employee/UpdateEmployee",
+                new StringContent(EmployeeContextDTO, Encoding.UTF8, "application/json"));
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+                //Error page 
+            }
+        }
+
+        public async Task<IActionResult> Delete(int ID)
+        {
+            HttpClient client = new HttpClient();
+
+            string url = "http://localhost:37833/";
+
+            var response = await client.GetAsync(url + "api/Employee/DeleteEmployee?id=" + ID);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

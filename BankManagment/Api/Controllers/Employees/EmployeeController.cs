@@ -41,7 +41,7 @@ namespace Api.Controllers.Employees
         public IActionResult UpdateEmployee(EmployeeDTO employeeDTO)
         {
             Employee employee = new Employee();
-            employee = _employeeRepository.GetById(employeeDTO.Id);
+            employee = _employeeRepository.GetAll().Where(x => x.Id == employeeDTO.Id).FirstOrDefault();
 
             employee.Address = employeeDTO.Address;
             employee.DateOfBirth = employeeDTO.DateOfBirth;
@@ -61,7 +61,7 @@ namespace Api.Controllers.Employees
         public IActionResult DeleteEmployee(int id) 
         {
             Employee employee = new Employee();
-            employee = _employeeRepository.GetById(id);
+            employee = _employeeRepository.GetAll().Where(x => x.Id == id).FirstOrDefault();
 
             _employeeRepository.Delete(employee);
 
@@ -108,6 +108,26 @@ namespace Api.Controllers.Employees
             });
 
             return Ok(jsonString);
+        }
+
+        public IActionResult GetEmployeeById(int ID)
+        {
+            Employee employee = new Employee();
+            employee = _employeeRepository.GetAll().Where(x=>x.Id == ID).FirstOrDefault();
+
+            EmployeeDTO employeeDTO = new EmployeeDTO();
+
+            employeeDTO.Address = employee.Address;
+            employeeDTO.DateOfBirth = employee.DateOfBirth;
+            employeeDTO.Email = employee.Email;
+            employeeDTO.FullName = employee.FullName;
+            employeeDTO.JoinDate = employeeDTO.JoinDate;
+            employeeDTO.Mobile = employee.Mobile;
+            employeeDTO.Salary = employee.Salary;
+            employeeDTO.QualificationId = employee.QualificationId;
+            employeeDTO.Id = employee.Id;
+
+            return Ok(employeeDTO);
         }
     }
 }
