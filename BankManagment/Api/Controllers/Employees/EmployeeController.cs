@@ -41,7 +41,7 @@ namespace Api.Controllers.Employees
         public IActionResult UpdateEmployee(EmployeeDTO employeeDTO)
         {
             Employee employee = new Employee();
-            employee = _employeeRepository.GetAll().Where(x => x.Id == employeeDTO.Id).FirstOrDefault();
+            employee = _employeeRepository.GetById(employeeDTO.Id);
 
             employee.Address = employeeDTO.Address;
             employee.DateOfBirth = employeeDTO.DateOfBirth;
@@ -61,7 +61,7 @@ namespace Api.Controllers.Employees
         public IActionResult DeleteEmployee(int id) 
         {
             Employee employee = new Employee();
-            employee = _employeeRepository.GetAll().Where(x => x.Id == id).FirstOrDefault();
+            employee = _employeeRepository.GetById(id);
 
             _employeeRepository.Delete(employee);
 
@@ -113,7 +113,7 @@ namespace Api.Controllers.Employees
         public IActionResult GetEmployeeById(int ID)
         {
             Employee employee = new Employee();
-            employee = _employeeRepository.GetAll().Where(x=>x.Id == ID).FirstOrDefault();
+            employee = _employeeRepository.GetById(ID);
 
             EmployeeDTO employeeDTO = new EmployeeDTO();
 

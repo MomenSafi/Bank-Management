@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,7 +52,17 @@ namespace Repositories
 
         public T GetById(int id)
         {
-            return context.Set<T>().FirstOrDefault();
+            return context.Set<T>().Find(id);
+        }
+
+        public IQueryable<T> Find(Expression<Func<T, bool>> expression, params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = _dbSet;
+            foreach (var item in includes)
+            {
+                query = query.Include(item);   
+            }
+            return query;
         }
     }
 }

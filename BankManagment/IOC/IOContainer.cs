@@ -20,6 +20,7 @@ namespace IOC
             services.AddScoped<INationalityRepository, NationalityRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddScoped<IQualificationRepository, QualificationRepository>();
+            services.AddScoped<IClientRepository, ClientRepository>();
         }
     }
 }
